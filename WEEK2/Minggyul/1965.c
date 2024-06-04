@@ -25,3 +25,9 @@ int main(){
     cout << max(DP[n][0], DP[n][1]);
     return 0;
 }
+
+/*
+최장 증가 수열인데 O(N^2)으로 구성해도 되기 때문에 브루트포스
+DP[i][0] = max(DP[i - 1][0], DP[i - 1][1])
+DP[i][1]은 j < i인 j에 대하여 arr[j] < arr[i]일 때 최대값 갱신
+*/ 
